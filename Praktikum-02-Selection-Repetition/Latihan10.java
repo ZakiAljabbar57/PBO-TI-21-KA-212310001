@@ -1,3 +1,5 @@
+// Zaki Aljabbar - 212310001 - TI-21-KA
+
 import java.util.Scanner;
 
 public class Latihan10 {
