@@ -20,10 +20,6 @@ public class Latihan10Swing {
             String validation = JOptionPane.showInputDialog(null, label);
             int conValidation = Integer.parseInt(validation);
 
-            // if (validation == null) {
-            // is_valid = true;
-            // }
-
             if (conValidation == pin) {
                 is_valid = true;
             } else {
@@ -44,6 +40,18 @@ public class Latihan10Swing {
                 menu_label += "Pilih menu: ";
 
                 String menu = JOptionPane.showInputDialog(null, menu_label);
+
+                if (menu == null) {
+                    int confirm = JOptionPane.showConfirmDialog(null, "Apakah anda ingin keluar?", "Keluar",
+                            JOptionPane.YES_NO_OPTION);
+                    if (confirm == 0) {
+                        JOptionPane.showMessageDialog(null, "Terima Kasih!", "Exit", JOptionPane.INFORMATION_MESSAGE);
+                        break;
+                    } else {
+                        continue;
+                    }
+                }
+
                 int conMenu = Integer.parseInt(menu);
 
                 switch (conMenu) {
@@ -82,6 +90,8 @@ public class Latihan10Swing {
 
                         if (choose == 0) {
                             opsi = true;
+                            JOptionPane.showMessageDialog(null, "Terima Kasih!", "ATM Kita",
+                                    JOptionPane.INFORMATION_MESSAGE);
                         } else if (choose == 1) {
                             opsi = false;
                         } else {
@@ -97,12 +107,10 @@ public class Latihan10Swing {
             } catch (NumberFormatException e) {
                 JOptionPane.showMessageDialog(null, "Maaf Menu Tidak Tersedia", "ATM",
                         JOptionPane.ERROR_MESSAGE);
-
-                break;
             }
         } while (opsi == false);
 
-        JOptionPane.showMessageDialog(null, "Terima Kasih!");
+        // JOptionPane.showMessageDialog(null, "Terima Kasih!");
 
         input.close();
     }
