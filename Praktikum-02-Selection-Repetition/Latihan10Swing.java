@@ -39,7 +39,7 @@ public class Latihan10Swing {
                 menu_label += "4. Keluar\n\n";
                 menu_label += "Pilih menu: ";
 
-                String menu = JOptionPane.showInputDialog(null, menu_label);
+                String menu = JOptionPane.showInputDialog(null, menu_label, "Menu", JOptionPane.INFORMATION_MESSAGE);
 
                 if (menu == null) {
                     int confirm = JOptionPane.showConfirmDialog(null, "Apakah anda ingin keluar?", "Keluar",
@@ -50,6 +50,10 @@ public class Latihan10Swing {
                     } else {
                         continue;
                     }
+                } else if (menu.isEmpty()) {
+                    JOptionPane.showMessageDialog(null, "Mohon Masukkan Kode Menu", "Alert!",
+                            JOptionPane.ERROR_MESSAGE);
+                    continue;
                 }
 
                 int conMenu = Integer.parseInt(menu);
@@ -109,8 +113,6 @@ public class Latihan10Swing {
                         JOptionPane.ERROR_MESSAGE);
             }
         } while (opsi == false);
-
-        // JOptionPane.showMessageDialog(null, "Terima Kasih!");
 
         input.close();
     }
