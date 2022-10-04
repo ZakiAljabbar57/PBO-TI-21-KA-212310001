@@ -17,14 +17,35 @@ public class Latihan10Swing {
         label += "Masukkan PIN : ";
 
         do {
-            String validation = JOptionPane.showInputDialog(null, label);
-            int conValidation = Integer.parseInt(validation);
+            try {
+                String validation = JOptionPane.showInputDialog(null, label, "ATM Kita",
+                        JOptionPane.INFORMATION_MESSAGE);
+                if (validation == null) {
+                    int confirm = JOptionPane.showConfirmDialog(null, "Apakah anda ingin keluar?", "Keluar",
+                            JOptionPane.YES_NO_OPTION);
+                    if (confirm == 0) {
+                        JOptionPane.showMessageDialog(null, "Terima Kasih!", "Keluar", JOptionPane.INFORMATION_MESSAGE);
+                        break;
+                    } else {
+                        continue;
+                    }
+                } else if (validation.isEmpty()) {
+                    JOptionPane.showMessageDialog(null, "Mohon Masukkan PIN Anda", "Alert!",
+                            JOptionPane.ERROR_MESSAGE);
+                    continue;
+                }
 
-            if (conValidation == pin) {
-                is_valid = true;
-            } else {
-                is_valid = false;
-                JOptionPane.showMessageDialog(null, "Maaf Pin Salah", "Password Salah", JOptionPane.ERROR_MESSAGE);
+                int conValidation = Integer.parseInt(validation);
+
+                if (conValidation == pin) {
+                    is_valid = true;
+                } else {
+                    is_valid = false;
+                    JOptionPane.showMessageDialog(null, "Maaf PIN Salah", "Alert!", JOptionPane.ERROR_MESSAGE);
+                }
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(null, "Harap Masukkan Numerik Karakter", "Alert!",
+                        JOptionPane.ERROR_MESSAGE);
             }
         } while (is_valid == false);
 
@@ -39,13 +60,14 @@ public class Latihan10Swing {
                 menu_label += "4. Keluar\n\n";
                 menu_label += "Pilih menu: ";
 
-                String menu = JOptionPane.showInputDialog(null, menu_label, "Menu", JOptionPane.INFORMATION_MESSAGE);
+                String menu = JOptionPane.showInputDialog(null, menu_label, "ATM Kita",
+                        JOptionPane.INFORMATION_MESSAGE);
 
                 if (menu == null) {
                     int confirm = JOptionPane.showConfirmDialog(null, "Apakah anda ingin keluar?", "Keluar",
                             JOptionPane.YES_NO_OPTION);
                     if (confirm == 0) {
-                        JOptionPane.showMessageDialog(null, "Terima Kasih!", "Exit", JOptionPane.INFORMATION_MESSAGE);
+                        JOptionPane.showMessageDialog(null, "Terima Kasih!", "Keluar", JOptionPane.INFORMATION_MESSAGE);
                         break;
                     } else {
                         continue;
@@ -89,7 +111,7 @@ public class Latihan10Swing {
                         break;
 
                     case 4:
-                        int choose = JOptionPane.showConfirmDialog(null, "Apakah Anda Ingin Keluar? ", "Konfirmasi",
+                        int choose = JOptionPane.showConfirmDialog(null, "Apakah Anda Ingin Keluar? ", "Keluar",
                                 JOptionPane.YES_NO_OPTION);
 
                         if (choose == 0) {
@@ -98,18 +120,15 @@ public class Latihan10Swing {
                                     JOptionPane.INFORMATION_MESSAGE);
                         } else if (choose == 1) {
                             opsi = false;
-                        } else {
-                            JOptionPane.showMessageDialog(null, "Maaf Command Salah", "Konfirmasi",
-                                    JOptionPane.ERROR_MESSAGE);
                         }
                         break;
                     default:
-                        JOptionPane.showMessageDialog(null, "Maaf Menu Tidak Tersedia", "ATM",
+                        JOptionPane.showMessageDialog(null, "Maaf Menu Tidak Tersedia", "Alert!",
                                 JOptionPane.ERROR_MESSAGE);
                         break;
                 }
             } catch (NumberFormatException e) {
-                JOptionPane.showMessageDialog(null, "Maaf Menu Tidak Tersedia", "ATM",
+                JOptionPane.showMessageDialog(null, "Maaf Menu Tidak Tersedia", "Alert!",
                         JOptionPane.ERROR_MESSAGE);
             }
         } while (opsi == false);
