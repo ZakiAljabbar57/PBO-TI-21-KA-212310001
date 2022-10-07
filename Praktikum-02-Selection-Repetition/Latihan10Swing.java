@@ -71,7 +71,7 @@ public class Latihan10Swing {
                         if (confirm == 0) {
                             JOptionPane.showMessageDialog(null, "Terima Kasih!", "Keluar",
                                     JOptionPane.INFORMATION_MESSAGE);
-                            break;
+                            break mainloop;
                         } else {
                             continue;
                         }
