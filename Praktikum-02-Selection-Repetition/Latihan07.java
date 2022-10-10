@@ -2,7 +2,7 @@
 
 import java.util.Scanner;
 
-class Resto {
+class NewResto {
     private long harga;
 
     public void chooseMenu(int menu) {
@@ -26,7 +26,7 @@ class Resto {
     }
 
     private long getPrices(int menu) {
-        Resto obj = new Resto();
+        NewResto obj = new NewResto();
         if (menu == 1) {
             obj.harga = 22000;
         } else if (menu == 2) {
@@ -40,7 +40,7 @@ class Resto {
 
 public class Latihan07 {
     public static void main(String[] args) {
-        Resto resto = new Resto();
+        NewResto resto = new NewResto();
         boolean back = false;
 
         Scanner input = new Scanner(System.in);
