@@ -1,0 +1,26 @@
+name: Assignment Notification
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy-tugas:
+    timeout-minutes: 10
+    runs-on: self-hosted
+
+    steps:
+      - name: send telegram message on push
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.MY_TELEGRAM_GROUP_ID }}
+          token: ${{ secrets.MY_TELEGRAM_BOT_TOKEN }}
+          message: |
+            Ada update pengumpulan tugas baru nich!
+
+            ${{ github.actor }} created commit:
+            Commit message: ${{ github.event.commits[0].message }}
+
+            Repository: ${{ github.repository }}
+
+            See changes: https://github.com/${{ github.repository }}/commit/${{ github.sha }}
