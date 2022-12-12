@@ -24,7 +24,7 @@ public class Latihan02 extends JFrame {
         pack();
         setLocationRelativeTo(null);
         // menentukan ukuran width dan height ada jendela
-        setSize(500, 500);
+        setSize(350, 400);
         // berikan judul pada jendela
         setTitle("Contoh Window Frame");
         // menutup jendela secara penuh
