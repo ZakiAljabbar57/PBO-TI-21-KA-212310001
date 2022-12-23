@@ -265,7 +265,6 @@ public class FormPage extends JFrame {
                         students.get(i).getFullname(),
                         students.get(i).getScore()
                 };
-                System.out.println(Arrays.toString(data));
                 tableModel.addRow(data);
             }
         } catch (Exception e) {

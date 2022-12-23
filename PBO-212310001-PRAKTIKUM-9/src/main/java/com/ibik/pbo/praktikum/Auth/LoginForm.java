@@ -84,9 +84,10 @@ public class LoginForm extends JFrame {
                 String password = new String(textPassword.getPassword());
 
                 LoginDAO login = new LoginDAO();
+                Admin adm = new Admin();
                 try {
                     if (login.authLogin(mail, password)) {
-                        JOptionPane.showMessageDialog(null, "Login Sukses!", "Sukses!",
+                        JOptionPane.showMessageDialog(null, "Selamat Datang!", "Sukses!",
                                 JOptionPane.INFORMATION_MESSAGE);
 
                         // Go To Form

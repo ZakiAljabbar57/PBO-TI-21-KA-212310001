@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.ibik.pbo.praktikum.AppTest" time="0.089" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.ibik.pbo.praktikum.AppTest" time="0.095" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="19"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-19\bin"/>
-    <property name="sun.java.command" value="C:\Users\Zaki\AppData\Local\Temp\surefire8684953758074488309\surefirebooter11797664063959874498.jar C:\Users\Zaki\AppData\Local\Temp\surefire8684953758074488309 2022-12-23T14-07-30_698-jvmRun1 surefire16747948873157832103tmp surefire_09727322275229771638tmp"/>
+    <property name="sun.java.command" value="C:\Users\Zaki\AppData\Local\Temp\surefire10104938725807534877\surefirebooter11599879302233462812.jar C:\Users\Zaki\AppData\Local\Temp\surefire10104938725807534877 2022-12-23T14-19-15_482-jvmRun1 surefire12030435047127043365tmp surefire_014684660893336439582tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="D:\Zaki\Kuliah\SEMESTER 3\OOP\Tugas\PBO-212310001-PRAKTIKUM-9\target\test-classes;D:\Zaki\Kuliah\SEMESTER 3\OOP\Tugas\PBO-212310001-PRAKTIKUM-9\target\classes;C:\Users\Zaki\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\Zaki\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Zaki\.m2\repository\com\mysql\mysql-connector-j\8.0.31\mysql-connector-j-8.0.31.jar;C:\Users\Zaki\.m2\repository\com\google\protobuf\protobuf-java\3.19.4\protobuf-java-3.19.4.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Zaki\AppData\Local\Temp\surefire8684953758074488309\surefirebooter11797664063959874498.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Zaki\AppData\Local\Temp\surefire10104938725807534877\surefirebooter11599879302233462812.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="19.0.1+10-21"/>
@@ -58,5 +58,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="63.0"/>
   </properties>
-  <testcase name="shouldAnswerWithTrue" classname="com.ibik.pbo.praktikum.AppTest" time="0.007"/>
+  <testcase name="shouldAnswerWithTrue" classname="com.ibik.pbo.praktikum.AppTest" time="0.006"/>
 </testsuite>
