@@ -7,7 +7,7 @@ on:
 jobs:
   deploy-tugas:
     timeout-minutes: 10
-    runs-on: self-hosted
+    runs-on: Windows
 
     steps:
       - name: send telegram message on push
